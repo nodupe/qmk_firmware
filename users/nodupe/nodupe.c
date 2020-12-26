@@ -1,1 +1,1 @@
-#include "nodupe.c"
+#include "nodupe.h"
