@@ -192,8 +192,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 };
 
-const uint16_t PROGMEM esc_combo[] = {KC_J, KC_K, COMBO_END};
-combo_t key_combos[COMBO_COUNT] = {COMBO(esc_combo, KC_ESC)};
+enum combos {
+  JK_ESC,
+  FD_MENU,
+    };   
+
+const uint16_t PROGMEM jk_combo[] = {KC_J, KC_K, COMBO_END};
+
+const uint16_t PROGMEM fd_combo[] = {KC_F, KC_D, COMBO_END};
+
+combo_t key_combos[COMBO_COUNT] = {
+  [JK_ESC] = COMBO(jk_combo, KC_ESC),
+  [FD_MENU] = COMBO(fd_combo, KC_LGUI)
+};
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
   switch (keycode) {
