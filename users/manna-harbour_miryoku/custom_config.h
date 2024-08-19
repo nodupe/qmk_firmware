@@ -5,6 +5,8 @@
 
 #pragma once
 
+//Disabled all that I could to reduce size.
+
 #define NO_ACTION_MACRO
 #define NO_ACTION_FUNCTION
 #ifndef NO_DEBUG
@@ -15,7 +17,16 @@
 #endif // !NO_PRINT
 #undef LOCKING_SUPPORT_ENABLE
 #undef LOCKING_RESYNC_ENABLE
-#define NO_ACTION_TAPPING
-#define NO_ACTION_ONESHOT
 #define NO_MUSIC_MODE
+
+#ifdef RGBLIGHT_ENABLE
+
+#undef  RGBLIGHT_EFFECT_RGB_TEST
+#undef  RGBLIGHT_EFFECT_ALTERNATING
+#undef  RGBLIGHT_EFFECT_STATIC_GRADIENT
+#undef  RGBLIGHT_EFFECT_KNIGHT
+#undef  RGBLIGHT_EFFECT_TWINKLE
+
+#endif
+
 

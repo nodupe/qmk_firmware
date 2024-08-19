@@ -1,6 +1,26 @@
 # Copyright 2019 Manna Harbour
 # https://github.com/manna-harbour/miryoku
 
+#PERSONAL PREFERENCES#
+
+MIRYOKU_ALPHAS=QWERTY
+MIRYOKU_NAV=VI
+
+OLED_ENABLE     = yes
+OLED_DRIVER     = SSD1306
+LTO_ENABLE      = yes
+RGBLIGHT_ENABLE = yes
+
+## Enable only what needed
+SPLIT_KEYBOARD = yes
+MOUSEKEY_ENABLE = yes
+RGBLIGHT_ENABLE = yes
+LTO_ENABLE = yes
+EXTRAFLAGS += -flto
+AVR_USE_MINIMAL_PRINTF = yes
+
+## Disable everything else - many rgb patterns are disabled on custom_config.
+
 AUDIO_ENABLE = no
 BACKLIGHT_ENABLE = no
 BLUETOOTH_ENABLE = no
@@ -8,17 +28,13 @@ BOOTMAGIC_ENABLE = no
 CONSOLE_ENABLE = no
 FAUXCLICKY_ENABLE = no
 HD44780_ENABLE = no
-MOUSEKEY_ENABLE = yes
 MIDI_ENABLE = no
 NKRO_ENABLE = no
-RGBLIGHT_ENABLE = yes
 SLEEP_LED_ENABLE = no
 UNICODE_ENABLE =no
-LTO_ENABLE = yes
-EXTRAFLAGS += -flto
 COMMAND_ENABLE = no
 SPACE_CADET_ENABLE = no
 GRAVE_ESC_ENABLE = no 
 MAGIC_ENABLE = no
-AVR_USE_MINIMAL_PRINTF = yes
+
 MUSIC_ENABLE = no
